@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Script tag</title>
+    <script>
+        
+        function plus() {
+            var n1 = Number(document.getElementById("fn1").value);
+            var n2 = Number(document.getElementById("fn2").value);
+            document.getElementById("result").value = Number(n1+n2);
+
+        }
+        function minus() {
+            var n1 = Number(document.getElementById("fn1").value);
+            var n2 = Number(document.getElementById("fn2").value);
+            document.getElementById("result").value = Number(n1-n2);
+
+        }
+        function mult() {
+            var n1 = Number(document.getElementById("fn1").value);
+            var n2 = Number(document.getElementById("fn2").value);
+            document.getElementById("result").value = Number(n1*n2);
+
+        }
+        function div() {
+            var n1 = Number(document.getElementById("fn1").value);
+            var n2 = Number(document.getElementById("fn2").value);
+            document.getElementById("result").value = Number(n1/n2);
+
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        <label id="n1" for="fn1">First Number</label>
+        <input type="number" id="fn1" name="fn1">
+        <label id="n2" for="fn2">Second Number</label>
+        <input type="number" id="fn2" name="fn2">
+        <br>
+        <input type="button" name="submit" value="+" onclick="plus()">
+        <input type="button" name="submit" value="-" onclick="minus()">
+        <input type="button" name="submit" value="*" onclick="mult()">
+        <input type="button" name="submit" value="/" onclick="div()">
+        <br><br>
+        <label id="fresult" for="result">Result: </label>
+        <input type="text" id="result" name="result">
+
+    </form>
+
+
+
+
+
+</body>
+
+</html>
