@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>script2</title>
+    <script>
+        function myFunction() {
+            var maths = Number(document.getElementById("fmaths").value);
+            var science = Number(document.getElementById("fscience").value);
+            var english = Number(document.getElementById("fEnglish").value);
+            var result = (maths + science + english) / 3;
+
+            if (result > 80) {
+                document.getElementById("fgrade").value = "A"
+            } else if (result <= 80 && result >= 70) {
+                document.getElementById("fgrade").value = "B"
+            } else if (result >= 60 && result <= 70) {
+                document.getElementById("fgrade").value = "C"
+            } else if (result >= 50 && result <= 60) {
+                document.getElementById("fgrade").value = "D"
+            } else {
+                document.getElementById("fgrade").value = "Fail"
+            }
+
+        }
+
+    </script>
+</head>
+
+<body>
+    <form>
+        <label id="maths" for="fmaths">Maths: </label>
+        <input type="number" id="fmaths" name="fmaths">
+        <br><br>
+        <label id="science" for="fscience">Science: </label>
+        <input type="number" id="fscience" name="fscience">
+        <br><br>
+        <label id="english" for="fEnglish">English: </label>
+        <input type="number" id="fEnglish" name="fEnglish">
+        <br><br>
+        <label id="grade" for="grade">Grade: </label>
+        <input type="text" id="fgrade" name="fgrade">
+        <br><br>
+        <input name="submit" type="button" value="Submit" onclick="myFunction()">
+
+
+
+
+
+    </form>
+
+</body>
+
+</html>
